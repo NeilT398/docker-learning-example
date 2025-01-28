@@ -7,7 +7,7 @@ async function fetchAsync(url) {
 
 
 async function getListItems() {
-  return fetchAsync("http://127.0.0.1:8000/api/get-list-items");
+  return fetchAsync("http://sip.ntsite.org:81/api/get-list-items");
 }
 
 

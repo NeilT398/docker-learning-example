@@ -6,11 +6,11 @@ services:
       context: src/frontend
     container_name: nginx-frontend
     ports:
-      - 20080:80
+      - 80:80
 
   fastapi:
     build:
       context: src/backend/api
     container_name: fastapi
     ports:
-      - 28000:8000
+      - 8000:8000

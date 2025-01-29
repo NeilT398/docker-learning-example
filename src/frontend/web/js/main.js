@@ -7,13 +7,14 @@ async function fetchAsync(url) {
 
 
 async function getListItems() {
-  return fetchAsync("http://sip.ntsite.org:81/api/get-list-items");
+  return fetchAsync("/api/get-list-items");
 }
 
 
 async function renderList() {
   var items = await getListItems();
   var list = document.getElementById("shopping-list");
+  list.replaceChildren();
 
   for (var i=0; i < items.length; i++) {
     var node = document.createElement("li");
